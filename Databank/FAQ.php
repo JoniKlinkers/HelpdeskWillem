@@ -1,6 +1,6 @@
 <?php
 	include 'connect.php';
-    $sql = "select * from tblProducten";
+    $sql = "select * from tblfaq";
     $resultaat = $mysqli->query($sql);
     echo"<table>";
     echo"<tr>";
