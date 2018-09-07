@@ -5,7 +5,7 @@ include 'connect.php';
 session_start();
 
 if (isset($_POST['submit']) && !isset($_SESSION['u_id'])) {
-	$sql = "SELECT * FROM TblGebruikers WHERE GebruikerEmail = '".$_POST['Email']."' AND GebruikerWW = '".$_POST['passwoord']."';";
+	$sql = "SELECT * FROM tblgebruikers WHERE GebruikerEmail = '".$_POST['Email']."' AND GebruikerWW = '".$_POST['passwoord']."';";
 	$result = mysqli_query($conn, $sql);
 	$numberRows = mysqli_num_rows($result);
 
