@@ -1,7 +1,7 @@
 <?php
 	include 'connect.php';
     $sql = "select * from tblfaq";
-    $resultaat = $mysqli->query($sql);
+    $resultaat = $conn->query($sql);
     echo"<table>";
     echo"<tr>";
     echo"<td>Productnummer</td>";
@@ -15,5 +15,4 @@
     echo "<table>";
     print "<a href=toevoegenProduct.php>Voeg een record toe</a>";
 
-?>
 ?>
