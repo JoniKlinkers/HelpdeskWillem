@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.header {
+    background-image: linear-gradient(to bottom right, #d5f4e6, #80ced6);
+    height: 40vh;
+    position: relative;
+}
+.header-small {
+     background-color: #80ced6;
+    height: 50px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.button-blue {
+    background-color: #80ced6;
+}
+
+.header-search--title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 45px;
+}
+.header-search {
+    position: absolute;
+    top: 30%;
+    bottom: 20%;
+    left: 25%;
+    right: 25%;
+    text-align: center;
+}
+.header-search2 {
+    text-align: center;
+}
+.header-search input[type="text"]  {
+    width: 550px;
+}
+.header-search2  input[type="text"]  {
+    width: 550px;
+}
+input[type="submit"] {
+   background-color: #80ced6 !important;
+    border: 1px solid #80ced6 !important;;
+    color: white !important;;
+} 
+.button {
+   background-color: #80ced6 !important;
+    border: 1px solid #80ced6 !important;
+    color: white !important;
+} 
+.header input[type="submit"]:hover {
+     border: 1px solid #80ced6;
+    color: white;
+    opacity: 0.8;
+}
+button:hover {
+     border: 1px solid #80ced6;
+    color: white;
+    opacity: 0.8;
+}
+.logo {
+    padding: 14px;
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.menu {
+    float: right;
+    padding: 14px;
+    padding-top: 20px;
+}
+.options i {
+ font-size: 110px;   
+}
+.options i:hover {
+ transform: translateY(-40px);
+    transition: all .5s;
+}
+.options {
+    margin: 150px auto;
+    text-align: center;
+}
+.options a {
+    color: black;
+}
+.options h4 {
+    padding-top: 10px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 14px;
+}
+.menu li {
+    display: inline;
+}
+.menu li a {
+    color: black;
+    text-decoration: none;
+    padding-right: 20px;
+    font-size: 18px;
+}
+.welcome {
+    background-color: gainsboro;
+    margin-top: -18px;
+    padding: 24px;
+}
+.login {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.register {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.register {
+    padding-bottom: 40px;
+}
+.login  input[type="text"],input[type="password"]  {
+    width: 100%;
+    
+}
+.register  input[type="text"],input[type="password"]  {
+    width: 100%;
+    
+}
+#bold {
+    font-weight: 800;
+}
+#green {
+    color: green;
+}
+#red {
+    color: red;
+}
+.error {
+    background-color: red;
+    padding: 8px;
+    color: white;
+    margin-bottom: 5px;
+}
+h1 {
+    padding: 14px;
+}
+.profiel {
+    margin-top: 120px;
+    background-color: #DCDCDC;
+    padding: 24px;
+    width: 900px;
+    margin: 0 auto;
+}
+.profiel-foto{
+}
+.profiel-foto img {
+    width: 100%;
+}
+.profiel h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+.profiel-info ul {
+    padding-top: 30px;
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Larger than tablet */
+@media screen and (max-width : 760px){
+    .header-search input[type="text"] {
+        width: 100%;
+    }
+    .profiel {
+        width: 98%;
+    }
+}
+
+
+
+/* FAQ ¨*/
+
+/* Code form internet */
+
+.heading-primary {
+  font-size: 2em;
+  padding: 2em;
+  text-align: center;
+}
+
+.accordion--element,
+.accordion-list {
+  border: 1px solid #ddd;
+    margin-bottom: 8px;
+}
+accordion--element:after,
+
+.accordion {
+    margin: 85px  4% 85px 4%;
+}
+.accordion dd,
+.accordion__panel {
+  background-color: #eee;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.accordion p {
+  padding: 1em 2em 1em 2em;
+}
+
+.accordion {
+  position: relative;
+  background-color: #eee;
+}
+
+
+
+.accordionTitle,
+.accordion__Heading {
+  background-color: #80ced6;
+  text-align: center;
+    font-size: 22px;
+    padding: 15px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  border-bottom: 1px solid #80ced6;
+}
+
+
+
+.accordionTitleActive,
+.accordionTitle.is-expanded {
+}
+.accordionTitleActive:before,
+.accordionTitle.is-expanded:before {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+}
+
+.accordionItem {
+  height: auto;
+  overflow: hidden;
+  max-height: 50em;
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s;
+}
+@media screen and (min-width: 48em) {
+  .accordionItem {
+    max-height: 15em;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+  }
+}
+
+.accordionItem.is-collapsed {
+  max-height: 0;
+}
+
+.no-js .accordionItem.is-collapsed {
+  max-height: auto;
+}
+
+.animateIn {
+  -webkit-animation: accordionIn 0.45s normal ease-in-out both 1;
+          animation: accordionIn 0.45s normal ease-in-out both 1;
+}
+.accordion a {
+    color: white;
+}
+.animateOut {
+  -webkit-animation: accordionOut 0.45s alternate ease-in-out both 1;
+          animation: accordionOut 0.45s alternate ease-in-out both 1;
+}
+
+@-webkit-keyframes accordionIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9) rotateX(-60deg);
+            transform: scale(0.9) rotateX(-60deg);
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes accordionIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9) rotateX(-60deg);
+            transform: scale(0.9) rotateX(-60deg);
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes accordionOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.9) rotateX(-60deg);
+            transform: scale(0.9) rotateX(-60deg);
+  }
+}
+@keyframes accordionOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.9) rotateX(-60deg);
+            transform: scale(0.9) rotateX(-60deg);
+  }
+}
