@@ -15,6 +15,34 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
+<?php
+include('\\connect.php');
+if(isset($_POST['GebruikerNaam'])) {
+    $GebruikerEmail = $_POST['GebruikerEmail'];
+    $GebruikerNaam = $_POST['GebruikerNaam'];
+    $GebruikerWW =$_POST['GebruikerWW'];
+    $GebruikerAvatar =$_POST['GebruikerAvatar'];
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+    $sql = "INSERT INTO tblgebruikers (GebruikerEmail, GebruikerNaam, GebruikerWW, GebruikerAvatar) VALUES (
+            '".$GebruikerEmail."', 
+            '".$GebruikerNaam."',
+            '".$password_hash."',
+            '".$GebruikerAvatar."'
+            )";
+        $resultaat = $conn->query("select count(*) as aantal from tblgebruikers where GebruikerEmail = '".$GebruikerEmail."'");
+        $row = $resultaat->fetch_assoc();
+        if ($row['aantal'] == 0){
+            if ($conn->query($sql)) {
+                header("Location: http://example.com/myOtherPage.php");
+            } else {
+                echo "Error record toevoegen: ". $conn->error."<br>";
+            }
+        }else{
+            echo "Email bestaat al probeer opnieuw<br>";
+        }
+        
+}
+?>    
     <div class="container">
         <div class="header">
            <div class="header-menu">
@@ -39,13 +67,15 @@
             <div class="error">Foutief wachtwoord ingevoerd</div>
             <form method="post" action="">
                 <label>Naam</label>
-                <input type="text" placeholder="Gerrit Wijnske">
+                <input type="text" name="GebruikerNaam" placeholder="Gerrit Wijnske">
                 <label>Email</label>
-                <input type="text" placeholder="wijnske@hotmail.com">
+                <input type="text" name="GebruikerEmail" placeholder="wijnske@hotmail.com">
+                <label>Avatar url</label>
+                <input type="text" name="GebruikerAvatar" placeholder="https://vignette.wikia.nocookie.net/blogclan-2/images/b/b9/Random-image-15.jpg/revision/latest?cb=20160706220047">
                 <label>Wachtwoord</label>
-                <input type="text" placeholder="wijnske@hotmail.com">
+                <input type="password" name="GebruikerWW" placeholder="wijnske@hotmail.com">
                 <label>Herhaal wachtwoord</label>
-                <input type="text" placeholder="wijnske@hotmail.com">
+                <input type="password" name="GebruikerWW2" placeholder="wijnske@hotmail.com">
                 <input type="submit" value="Registeren" class="button-blue">
             </form>
         </section>
