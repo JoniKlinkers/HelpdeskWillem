@@ -33,7 +33,9 @@ if(isset($_POST['GebruikerNaam'])) {
         $row = $resultaat->fetch_assoc();
         if ($row['aantal'] == 0){
             if ($conn->query($sql)) {
-                header("Location: index.php");
+                session_start();
+                $_SESSION["GebruikerEmail"] = $GebruikerEmail;
+                header("Location: stuurbevestigingmail.php");
             } else {
                 echo "Error record toevoegen: ". $conn->error."<br>";
             }
