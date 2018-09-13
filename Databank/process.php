@@ -17,6 +17,7 @@
             $_SESSION['GebruikerType'] = $row['GebruikerType'];
             $_SESSION['GebruikerWW'] = $row['GebruikerWW'];
             $_SESSION['GebruikerId'] = $row['GebruikerId'];
+
             header('location: ../index.php');
         }else {
         echo "Fout ingevuld probeer opnieuw.";
