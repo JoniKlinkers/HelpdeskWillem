@@ -28,7 +28,7 @@
            </div>
             <div class="header-search">
                <h3 class="header-search--title">Zoek je vraag hier</h3>
-                <form method="post">
+                <form method="post" action="/databank/FAQ.php">
                     <input type="text" placeholder="Begin je vraag te zoeken ...">
                     <input type="submit" value="Zoeken" class="button-blue">
                 </form>
