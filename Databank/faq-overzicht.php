@@ -35,88 +35,28 @@
             </div>
         </div>
         <section class="tabel">
-             <div class="accordion">
-                                         <div class="accordion--element">
-                                            <div class="accordion--head">
-                                                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Op wat richt website-naam zich?</a>
-                                            </div>
-                                            <div class="accordion-content accordionItem is-collapsed">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales ac dolor eu sollicitudin. Praesent gravida, purus at rhoncus tempus, risus libero mollis nisl, hendrerit aliquam lacus purus vitae lectus. Vestibulum ac fermentum libero. Nunc viverra, urna non egestas finibus, tellus diam rhoncus urna, non mollis ex ante ac massa. Phasellus elementum accumsan nisl a pellentesque. Vivamus ac lorem non velit dignissim ullamcorper. Maecenas porttitor erat quis tellus porttitor efficitur. Nulla facilisi.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="accordion--element">
-                                            <div class="accordion--head">
-                                                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Wat heeft website-naam te bieden?</a>
-                                            </div>
-                                            <div class="accordion-content accordionItem is-collapsed">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales ac dolor eu sollicitudin. Praesent gravida, purus at rhoncus tempus, risus libero mollis nisl, hendrerit aliquam lacus purus vitae lectus. Vestibulum ac fermentum libero. Nunc viverra, urna non egestas finibus, tellus diam rhoncus urna, non mollis ex ante ac massa. Phasellus elementum accumsan nisl a pellentesque. Vivamus ac lorem non velit dignissim ullamcorper. Maecenas porttitor erat quis tellus porttitor efficitur. Nulla facilisi.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="accordion--element">
-                                            <div class="accordion--head">
-                                                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Is de informatie op de website betrouwbaar?</a>
-                                            </div>
-                                            <div class="accordion-content accordionItem is-collapsed">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales ac dolor eu sollicitudin. Praesent gravida, purus at rhoncus tempus, risus libero mollis nisl, hendrerit aliquam lacus purus vitae lectus. Vestibulum ac fermentum libero. Nunc viverra, urna non egestas finibus, tellus diam rhoncus urna, non mollis ex ante ac massa. Phasellus elementum accumsan nisl a pellentesque. Vivamus ac lorem non velit dignissim ullamcorper. Maecenas porttitor erat quis tellus porttitor efficitur. Nulla facilisi.
-                                                </p>
-                                            </div>
-                                        </div>
-                                         <div class="accordion--element">
-                                            <div class="accordion--head">
-                                                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Mag ik de informatie op deze website overnemen?</a>
-                                            </div>
-                                            <div class="accordion-content accordionItem is-collapsed">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales ac dolor eu sollicitudin. Praesent gravida, purus at rhoncus tempus, risus libero mollis nisl, hendrerit aliquam lacus purus vitae lectus. Vestibulum ac fermentum libero. Nunc viverra, urna non egestas finibus, tellus diam rhoncus urna, non mollis ex ante ac massa. Phasellus elementum accumsan nisl a pellentesque. Vivamus ac lorem non velit dignissim ullamcorper. Maecenas porttitor erat quis tellus porttitor efficitur. Nulla facilisi.
-                                                </p>
-                                            </div>
-                                        </div>
-                                         <div class="accordion--element">
-                                            <div class="accordion--head">
-                                                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Worden alle wedstrijden live gevolgd?</a>
-                                            </div>
-                                            <div class="accordion-content accordionItem is-collapsed">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales ac dolor eu sollicitudin. Praesent gravida, purus at rhoncus tempus, risus libero mollis nisl, hendrerit aliquam lacus purus vitae lectus. Vestibulum ac fermentum libero. Nunc viverra, urna non egestas finibus, tellus diam rhoncus urna, non mollis ex ante ac massa. Phasellus elementum accumsan nisl a pellentesque. Vivamus ac lorem non velit dignissim ullamcorper. Maecenas porttitor erat quis tellus porttitor efficitur. Nulla facilisi.
-                                                </p>
-                                            </div>
-                                        </div>
-                                         <div class="accordion--element">
-                                            <div class="accordion--head">
-                                                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Wie zorgt voor de onderhoud van de website?</a>
-                                            </div>
-                                            <div class="accordion-content accordionItem is-collapsed">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales ac dolor eu sollicitudin. Praesent gravida, purus at rhoncus tempus, risus libero mollis nisl, hendrerit aliquam lacus purus vitae lectus. Vestibulum ac fermentum libero. Nunc viverra, urna non egestas finibus, tellus diam rhoncus urna, non mollis ex ante ac massa. Phasellus elementum accumsan nisl a pellentesque. Vivamus ac lorem non velit dignissim ullamcorper. Maecenas porttitor erat quis tellus porttitor efficitur. Nulla facilisi.
-                                                </p>
-                                            </div>
-                                        </div>
-                                         <div class="accordion--element">
-                                            <div class="accordion--head">
-                                                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Wie heeft deze website gemaakt?</a>
-                                            </div>
-                                            <div class="accordion-content accordionItem is-collapsed">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales ac dolor eu sollicitudin. Praesent gravida, purus at rhoncus tempus, risus libero mollis nisl, hendrerit aliquam lacus purus vitae lectus. Vestibulum ac fermentum libero. Nunc viverra, urna non egestas finibus, tellus diam rhoncus urna, non mollis ex ante ac massa. Phasellus elementum accumsan nisl a pellentesque. Vivamus ac lorem non velit dignissim ullamcorper. Maecenas porttitor erat quis tellus porttitor efficitur. Nulla facilisi.
-                                                </p>
-                                            </div>
-                                        </div>
-                                         <div class="accordion--element">
-                                            <div class="accordion--head">
-                                                <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Hoe neem ik contact op?</a>
-                                            </div>
-                                            <div class="accordion-content accordionItem is-collapsed">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales ac dolor eu sollicitudin. Praesent gravida, purus at rhoncus tempus, risus libero mollis nisl, hendrerit aliquam lacus purus vitae lectus. Vestibulum ac fermentum libero. Nunc viverra, urna non egestas finibus, tellus diam rhoncus urna, non mollis ex ante ac massa. Phasellus elementum accumsan nisl a pellentesque. Vivamus ac lorem non velit dignissim ullamcorper. Maecenas porttitor erat quis tellus porttitor efficitur. Nulla facilisi.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+           <div class="accordion">
+              <?php
+              include 'connect.php';
+              $vraag = $_POST['zoekterm'];
+              $sql = "select * from tblfaq where FAQVraag like '%".$vraag."%'";
+              $resultaat = $conn->query($sql);
+              $i=0;
+              while ($row = $resultaat->fetch_assoc()) {
+                $i++;
+                  echo'<div class="accordion--element">';
+                    echo'<div class="accordion--head">';
+                      echo'<a href="#accordion'.$i.'" aria-expanded="false" aria-controls="accordion'.$i.'" class="accordion-title accordionTitle js-accordionTrigger">'.$row['FAQVraag'].'</a>';
+                  echo'</div>';
+                  echo'<div class="accordion-content accordionItem is-collapsed">';
+                      echo'<p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales ac dolor eu sollicitudin. Praesent gravida, purus at rhoncus tempus, risus libero mollis nisl, hendrerit aliquam lacus purus vitae lectus. Vestibulum ac fermentum libero. Nunc viverra, urna non egestas finibus, tellus diam rhoncus urna, non mollis ex ante ac massa. Phasellus elementum accumsan nisl a pellentesque. Vivamus ac lorem non velit dignissim ullamcorper. Maecenas porttitor erat quis tellus porttitor efficitur. Nulla facilisi.
+                      </p>';
+                  echo'</div>';
+              echo'</div>';
+              } 
+            ?>
+          </div>
         </section>
     </div>
     <footer>
