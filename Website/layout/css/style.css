@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.header {
+    background-image: linear-gradient(to bottom right, #d5f4e6, #80ced6);
+    height: 40vh;
+    position: relative;
+}
+.header-small {
+     background-color: #80ced6;
+    height: 50px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.button-blue {
+    background-color: #80ced6;
+}
+
+.header-search--title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 45px;
+}
+.header-search {
+    position: absolute;
+    top: 30%;
+    bottom: 20%;
+    left: 25%;
+    right: 25%;
+    text-align: center;
+}
+.header-search2 {
+    text-align: center;
+}
+.header-search input[type="text"]  {
+    width: 550px;
+}
+.header-search2  input[type="text"]  {
+    width: 550px;
+}
+input[type="submit"] {
+   background-color: #80ced6 !important;
+    border: 1px solid #80ced6 !important;;
+    color: white !important;;
+} 
+.button {
+   background-color: #80ced6 !important;
+    border: 1px solid #80ced6 !important;
+    color: white !important;
+} 
+.header input[type="submit"]:hover {
+     border: 1px solid #80ced6;
+    color: white;
+    opacity: 0.8;
+}
+button:hover {
+     border: 1px solid #80ced6;
+    color: white;
+    opacity: 0.8;
+}
+.logo {
+    padding: 14px;
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.menu {
+    float: right;
+    padding: 14px;
+    padding-top: 20px;
+}
+.options i {
+ font-size: 110px;   
+}
+.options i:hover {
+ transform: translateY(-40px);
+    transition: all .5s;
+}
+.options {
+    margin: 150px auto;
+    text-align: center;
+}
+.options a {
+    color: black;
+}
+.options h4 {
+    padding-top: 10px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 14px;
+}
+.menu li {
+    display: inline;
+}
+.menu li a {
+    color: black;
+    text-decoration: none;
+    padding-right: 20px;
+    font-size: 18px;
+}
+.welcome {
+    background-color: gainsboro;
+    margin-top: -18px;
+    padding: 24px;
+}
+.login {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.register {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.register {
+    padding-bottom: 40px;
+}
+.login  input[type="text"],input[type="password"]  {
+    width: 100%;
+    
+}
+.register  input[type="text"],input[type="password"]  {
+    width: 100%;
+    
+}
+.error {
+    background-color: red;
+    padding: 8px;
+    color: white;
+    margin-bottom: 5px;
+}
+/* Larger than tablet */
+@media screen and (max-width : 760px){
+    .header-search input[type="text"] {
+        width: 100%;
+    }
+}
