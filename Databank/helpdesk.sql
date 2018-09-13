@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 07 sep 2018 om 13:11
+-- Gegenereerd op: 13 sep 2018 om 13:19
 -- Serverversie: 5.7.21
 -- PHP-versie: 5.6.35
 
@@ -62,8 +62,25 @@ DROP TABLE IF EXISTS `tblcategorie`;
 CREATE TABLE IF NOT EXISTS `tblcategorie` (
   `CategorieId` int(11) NOT NULL AUTO_INCREMENT,
   `CategorieNaam` text NOT NULL,
+  `subCategorie` text NOT NULL,
   PRIMARY KEY (`CategorieId`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `tblcategorie`
+--
+
+INSERT INTO `tblcategorie` (`CategorieId`, `CategorieNaam`, `subCategorie`) VALUES
+(1, 'Login/Password problem', 'Administratief'),
+(2, 'Upload problem', 'Administratief'),
+(3, 'Other', 'Administratief'),
+(4, 'Hardware problem', 'Technisch'),
+(5, 'Printer', 'Technisch'),
+(6, 'Other', 'Technisch'),
+(7, 'LAN', 'Netwerk'),
+(8, 'Firewall', 'Netwerk'),
+(9, 'Wireless', 'Netwerk'),
+(10, 'Other', 'Netwerk');
 
 -- --------------------------------------------------------
 
