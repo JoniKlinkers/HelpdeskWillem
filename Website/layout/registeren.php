@@ -22,8 +22,8 @@
                    <h4>MANGO'S</h4>
                </div>
                <div class="menu">
-                   <a href="login.html"><button type="submit" value="Aanmelden" class="button">Aanmelden</button></a>
-                  <a href="registeren.html"><button type="submit" value="Aanmelden" class="button">Registeren</button></a>
+                   <a href="login.php"><button type="submit" value="Aanmelden" class="button">Aanmelden</button></a>
+                  <a href="registeren.php"><button type="submit" value="Aanmelden" class="button">Registeren</button></a>
                </div>
            </div>
             <div class="header-search">
@@ -45,7 +45,7 @@
                 <label>Wachtwoord</label>
                 <input type="text" placeholder="wijnske@hotmail.com">
                 <label>Herhaal wachtwoord</label>
-                <input type="text" placeholder="wijnske@hotmail.com">
+                <input type="password" placeholder="wijnske@hotmail.com">
                 <input type="submit" value="Registeren" class="button-blue">
             </form>
         </section>
