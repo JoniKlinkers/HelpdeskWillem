@@ -10,7 +10,7 @@
     }else{
         $sql = "select * from tblgebruikers where GebruikerEmail = '".$GebruikerEmail."'";
  
-    if($resultaat = $mysqli->query($sql)){
+    if($resultaat = $conn->query($sql)){
         $row = $resultaat->fetch_assoc();
         if(password_verify($password, $row['password'])){
             $_SESSION['GebruikerEmail'] = $GebruikerEmail;
@@ -25,6 +25,4 @@
         echo '</br> <a href="index.php">back</a>';
     }
     }
-    
-
 ?>
