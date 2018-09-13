@@ -15,14 +15,14 @@
         if(password_verify($password, $row['password'])){
             $_SESSION['GebruikerEmail'] = $GebruikerEmail;
             $_SESSION['GebruikerType'] = $row['GebruikerType'];
-            header('location: index.php');
+            header('location: ../index.php');
         }else {
         echo "Fout ingevuld probeer opnieuw.";
-        echo '</br> <a href="index.php">back</a>';
+        echo '</br> <a href="login.html">back</a>';
         }
     } else {
         echo "Fout ingevuld probeer opnieuw.";
-        echo '</br> <a href="index.php">back</a>';
+        echo '</br> <a href="login.html">back</a>';
     }
     }
 ?>
