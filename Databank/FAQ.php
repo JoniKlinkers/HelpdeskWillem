@@ -13,6 +13,4 @@
         echo "<tr><td>". $row['FAQId'] ."</td><td>". $row['FAQVraag'] ."</td><td>". $row['FAQAntwoord'] ."</td></tr>";
     }
     echo "<table>";
-    print "<a href=toevoegenProduct.php>Voeg een record toe</a>";
-
 ?>
