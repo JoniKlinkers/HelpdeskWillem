@@ -33,7 +33,7 @@ if(isset($_POST['GebruikerNaam'])) {
         $row = $resultaat->fetch_assoc();
         if ($row['aantal'] == 0){
             if ($conn->query($sql)) {
-                header("Location: http://example.com/myOtherPage.php");
+                header("Location: index.php");
             } else {
                 echo "Error record toevoegen: ". $conn->error."<br>";
             }
@@ -64,7 +64,6 @@ if(isset($_POST['GebruikerNaam'])) {
         </div>
         <section class="register">
             <h2>Registeren</h2>
-            <div class="error">Foutief wachtwoord ingevoerd</div>
             <form method="post" action="">
                 <label>Naam</label>
                 <input type="text" name="GebruikerNaam" placeholder="Gerrit Wijnske">
@@ -73,9 +72,9 @@ if(isset($_POST['GebruikerNaam'])) {
                 <label>Avatar url</label>
                 <input type="text" name="GebruikerAvatar" placeholder="https://vignette.wikia.nocookie.net/blogclan-2/images/b/b9/Random-image-15.jpg/revision/latest?cb=20160706220047">
                 <label>Wachtwoord</label>
-                <input type="password" name="GebruikerWW" placeholder="wijnske@hotmail.com">
+                <input type="password" name="GebruikerWW" placeholder="azerty123">
                 <label>Herhaal wachtwoord</label>
-                <input type="password" name="GebruikerWW2" placeholder="wijnske@hotmail.com">
+                <input type="password" name="GebruikerWW2" placeholder="azerty123">
                 <input type="submit" value="Registeren" class="button-blue">
             </form>
         </section>
