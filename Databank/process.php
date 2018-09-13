@@ -15,6 +15,7 @@
         if(password_verify($password, $row['password'])){
             $_SESSION['GebruikerEmail'] = $GebruikerEmail;
             $_SESSION['GebruikerType'] = $row['GebruikerType'];
+            $_SESSION['GebruikerWW'] = $row['password'];
             header('location: ../index.php');
         }else {
         echo "Fout ingevuld probeer opnieuw.";
