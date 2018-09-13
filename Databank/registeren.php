@@ -22,7 +22,7 @@ if(isset($_POST['GebruikerNaam'])) {
     $GebruikerNaam = $_POST['GebruikerNaam'];
     $GebruikerWW =$_POST['GebruikerWW'];
     $GebruikerAvatar =$_POST['GebruikerAvatar'];
-    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+    $password_hash = password_hash($GebruikerWW, PASSWORD_DEFAULT);
     $sql = "INSERT INTO tblgebruikers (GebruikerEmail, GebruikerNaam, GebruikerWW, GebruikerAvatar) VALUES (
             '".$GebruikerEmail."', 
             '".$GebruikerNaam."',
