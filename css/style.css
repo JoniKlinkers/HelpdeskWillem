@@ -129,15 +129,52 @@ footer {
     width: 100%;
     
 }
+#bold {
+    font-weight: 800;
+}
+#green {
+    color: green;
+}
+#red {
+    color: red;
+}
 .error {
     background-color: red;
     padding: 8px;
     color: white;
     margin-bottom: 5px;
 }
+h1 {
+    padding: 14px;
+}
+.profiel {
+    margin-top: 120px;
+    background-color: #DCDCDC;
+    padding: 24px;
+    width: 900px;
+    margin: 0 auto;
+}
+.profiel-foto{
+}
+.profiel-foto img {
+    width: 100%;
+}
+.profiel h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+.profiel-info ul {
+    padding-top: 30px;
+    list-style-type: none;
+    text-align: center;
+}
+
 /* Larger than tablet */
 @media screen and (max-width : 760px){
     .header-search input[type="text"] {
         width: 100%;
+    }
+    .profiel {
+        width: 98%;
     }
 }
