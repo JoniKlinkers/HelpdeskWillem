@@ -1,7 +1,10 @@
 # HelpdeskWillem
-A schoolproject to learn the SCUM method
+A schoolproject to learn the SCRUM method
 
-Gebruikerstypen:
+Gebruikerstypen:				
+
+
+
 0 gebruiker 
 	
 
