@@ -50,16 +50,15 @@ if(isset($_POST['GebruikerNaam'])) {
            <div class="header-menu">
                <div class="logo">
                    <h4>MANGO'S</h4>
-               </div>
-               <div class="menu">
-                   <a href="login.html"><button type="submit" value="Aanmelden" class="button">Aanmelden</button></a>
-                  <a href="registeren.php"><button type="submit" value="Aanmelden" class="button">Registeren</button></a>
-               </div>
+                </div>
+                <div class="menu">
+                  <a href="login.php"><button type="submit" value="Aanmelden" class="button">Aanmelden</button></a>
+                </div>
            </div>
             <div class="header-search">
                <h3 class="header-search--title">Zoek je vraag hier</h3>
-                <form method="post">
-                    <input type="text" placeholder="Begin je vraag te zoeken ...">
+                <form method="post" action="FAQ-overzicht.php">
+                    <input type="text" placeholder="Begin je vraag te zoeken ..." name="zoekterm">
                     <input type="submit" value="Zoeken" class="button-blue">
                 </form>
             </div>
@@ -68,15 +67,15 @@ if(isset($_POST['GebruikerNaam'])) {
             <h2>Registeren</h2>
             <form method="post" action="">
                 <label>Naam</label>
-                <input type="text" name="GebruikerNaam" placeholder="Gerrit Wijnske">
+                <input type="text" name="GebruikerNaam" placeholder="Gerrit Wijnske" required="">
                 <label>Email</label>
-                <input type="text" name="GebruikerEmail" placeholder="wijnske@hotmail.com">
+                <input type="Email" name="GebruikerEmail" placeholder="wijnske@hotmail.com" required="">
                 <label>Avatar url</label>
-                <input type="text" name="GebruikerAvatar" placeholder="https://vignette.wikia.nocookie.net/blogclan-2/images/b/b9/Random-image-15.jpg/revision/latest?cb=20160706220047">
+                <input type="text" name="GebruikerAvatar" placeholder="https://www.website.com/image.png" required="">
                 <label>Wachtwoord</label>
-                <input type="password" name="GebruikerWW" placeholder="azerty123">
+                <input type="password" name="GebruikerWW" placeholder="azerty123" required="">
                 <label>Herhaal wachtwoord</label>
-                <input type="password" name="GebruikerWW2" placeholder="azerty123">
+                <input type="password" name="GebruikerWW2" placeholder="azerty123" required="">
                 <input type="submit" value="Registeren" class="button-blue">
             </form>
         </section>

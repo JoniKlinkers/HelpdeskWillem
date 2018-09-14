@@ -24,11 +24,11 @@
                <div class="menu">
                    <a href="registeren.php"><button type="submit" value="Aanmelden" class="button">Registeren</button></a>
                </div>
-           </div>
+            </div>
             <div class="header-search">
                <h3 class="header-search--title">Zoek je vraag hier</h3>
-                <form method="post">
-                    <input type="text" placeholder="Begin je vraag te zoeken ...">
+                <form method="post" action="FAQ-overzicht.php">
+                    <input type="text" placeholder="Begin je vraag te zoeken ..." name="zoekterm">
                     <input type="submit" value="Zoeken" class="button-blue">
                 </form>
             </div>

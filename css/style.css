@@ -129,6 +129,14 @@ footer {
     width: 100%;
     
 }
+.register  input[type="text"],input[type="Email"]  {
+    width: 100%;
+    
+}
+.login  input[type="text"],input[type="password"]  {
+    width: 100%;
+    
+}
 #bold {
     font-weight: 800;
 }
