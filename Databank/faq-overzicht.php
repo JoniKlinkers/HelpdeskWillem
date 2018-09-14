@@ -28,8 +28,8 @@
            </div>
             <div class="header-search">
                <h3 class="header-search--title">Zoek een andere vraag</h3>
-                <form method="post" action="faq-overzicht.php">
-                    <input type="text" placeholder="Begin je vraag te zoeken ..." name="vraag">
+                <form method="post" action="FAQ-overzicht.php">
+                    <input type="text" placeholder="Begin je vraag te zoeken ..." name="zoekterm">
                     <input type="submit" value="Zoeken" class="button-blue">
                 </form>
             </div>
