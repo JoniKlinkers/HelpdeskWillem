@@ -2,7 +2,7 @@
 $verificatie=0;
 $hashpassword = password_hash($verificatie, PASSWORD_DEFAULT);
 require("PHPMailer/class.phpmailer.php");
-$bericht ='Nieuwe inschrijving van: helpdesk klik <a>hier</a href="bevestigingpagina.php"> om u account te bevestigen '.$hashpassword;
+$bericht ='Nieuwe inschrijving van: helpdesk vul deze link in op onze site om in te loggen '.$hashpassword;
  
 $mail = new PHPMailer();
 $mail->IsSMTP();
