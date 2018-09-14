@@ -340,3 +340,12 @@ accordion--element:after,
             transform: scale(0.9) rotateX(-60deg);
   }
 }
+.wwtitle{
+    width: 400px;
+}
+.wwtable{
+    width: 100%;
+}
+.wwbox{
+    width: 75%;
+}
