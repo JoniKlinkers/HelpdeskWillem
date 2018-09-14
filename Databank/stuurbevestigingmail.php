@@ -1,12 +1,9 @@
 <?php
-$woordverificatie=0;
-$password_hash = password_hash($woordverificatie, PASSWORD_DEFAULT);
+$verificatie=0;
+$hashpassword = password_hash($verificatie, PASSWORD_DEFAULT);
 require("PHPMailer/class.phpmailer.php");
-$bericht ='Nieuwe inschrijving van helpdesk mango: vul deze link in op de site om u  account te bevestigen  '$woordverificatie;
-$password_hash = password_hash($GebruikerWW, PASSWORD_DEFAULT);
-        
-        echo ;
-        
+$bericht ='Nieuwe inschrijving van: helpdesk klik <a>hier</a href="bevestigingpagina.php"> om u account te bevestigen '.$hashpassword;
+ 
 $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->SMTPAuth = true;
