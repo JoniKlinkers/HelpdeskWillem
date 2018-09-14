@@ -65,6 +65,6 @@
     <footer>
         Copyright Mango's 2018. All right reserved.
     </footer>
-    <script src="../js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
