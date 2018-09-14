@@ -62,25 +62,24 @@ DROP TABLE IF EXISTS `tblcategorie`;
 CREATE TABLE IF NOT EXISTS `tblcategorie` (
   `CategorieId` int(11) NOT NULL AUTO_INCREMENT,
   `CategorieNaam` text NOT NULL,
-  `subCategorie` text NOT NULL,
+  `SubCategorie` text NOT NULL,
   PRIMARY KEY (`CategorieId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
-
---
+ --
 -- Gegevens worden geëxporteerd voor tabel `tblcategorie`
 --
-
-INSERT INTO `tblcategorie` (`CategorieId`, `CategorieNaam`, `subCategorie`) VALUES
-(1, 'Login/Password problem', 'Administratief'),
-(2, 'Upload problem', 'Administratief'),
-(3, 'Other', 'Administratief'),
-(4, 'Hardware problem', 'Technisch'),
-(5, 'Printer', 'Technisch'),
-(6, 'Other', 'Technisch'),
-(7, 'LAN', 'Netwerk'),
-(8, 'Firewall', 'Netwerk'),
-(9, 'Wireless', 'Netwerk'),
-(10, 'Other', 'Netwerk');
+ INSERT INTO `tblcategorie` (`CategorieId`, `CategorieNaam`, `SubCategorie`) VALUES
+(1, 'Administratief', 'Login/Passwoord probleem'),
+(2, 'Administratief', 'Upload probleem'),
+(3, 'Administratief', 'Other'),
+(4, 'Technisch', 'Hardware probleem'),
+(5, 'Technisch', 'Printer'),
+(6, 'Technisch', 'Other'),
+(7, 'Netwerk', 'Firewall'),
+(8, 'Netwerk', 'LAN'),
+(9, 'Netwerk', 'Wireless'),
+(10, 'Netwerk', 'Other');
+COMMIT;
 
 -- --------------------------------------------------------
 
