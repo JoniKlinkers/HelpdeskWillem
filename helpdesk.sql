@@ -65,10 +65,12 @@ CREATE TABLE IF NOT EXISTS `tblcategorie` (
   `SubCategorie` text NOT NULL,
   PRIMARY KEY (`CategorieId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
- --
+
+--
 -- Gegevens worden geëxporteerd voor tabel `tblcategorie`
 --
- INSERT INTO `tblcategorie` (`CategorieId`, `CategorieNaam`, `SubCategorie`) VALUES
+
+INSERT INTO `tblcategorie` (`CategorieId`, `CategorieNaam`, `SubCategorie`) VALUES
 (1, 'Administratief', 'Login/Passwoord probleem'),
 (2, 'Administratief', 'Upload probleem'),
 (3, 'Administratief', 'Other'),
@@ -112,7 +114,6 @@ CREATE TABLE IF NOT EXISTS `tblgebruikers` (
   `GebruikerAvatar` text NOT NULL,
   `Online` int(11) NOT NULL DEFAULT '0',
   `hashpassword` text NOT NULL,
-
   PRIMARY KEY (`GebruikerId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
