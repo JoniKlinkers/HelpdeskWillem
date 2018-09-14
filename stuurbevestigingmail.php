@@ -1,6 +1,8 @@
 <?php
+$verificatie=0;
+$hashpassword = password_hash($verificatie, PASSWORD_DEFAULT);
 require("PHPMailer/class.phpmailer.php");
-$bericht ='Nieuwe inschrijving van: helpdesk klik <a>hier</a href="bevestigingpagina.php"> om u account te bevestigen ';
+$bericht ='Nieuwe inschrijving van: helpdesk vul deze link in op onze site om in te loggen '.$hashpassword;
  
 $mail = new PHPMailer();
 $mail->IsSMTP();
@@ -16,7 +18,12 @@ $mail->Subject = 'bevestiging Mango helpdesk';
 $mail->Body = $bericht;
 $mail->WordWrap = 10000;
 
- 
+$sql = "UPDATE tblgebruikers SET hashpassword = '" .$hashpassword."' WHERE GebruikerEmail = '".$_SESSION["GebruikerEmail"]."'";
+
+if ($mysqli->query($sql) == TRUE){
+    
+}
+$mysqli->close();
 
 if(!$mail->Send()){
 print'<h3>Bericht niet verzonden</h3><br>';
