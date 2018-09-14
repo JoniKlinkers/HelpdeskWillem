@@ -39,6 +39,10 @@
            <div class="accordion">
               <?php
               include 'connect.php';
+              if (isset($_POST['zoekterm'])) {
+              }else{
+                $_POST['zoekterm']='';
+              }
               $vraag = $_POST['zoekterm'];
               $sql = "select * from tblfaq where FAQVraag like '%".$vraag."%'";
               $resultaat = $conn->query($sql);
