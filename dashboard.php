@@ -1,8 +1,14 @@
 <?php
 session_start();
+include('connect.php');
 if(!isset( $_SESSION['GebruikerId'])) {
     echo header('location: login.php');
 }
+
+$userEmail = $_SESSION['GebruikerEmail'];
+$resultaat = $conn->query("select *  from tblgebruikers where GebruikerEmail = '{$userEmail}'");
+        $row = $resultaat->fetch_assoc();
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,14 +35,16 @@ if(!isset( $_SESSION['GebruikerId'])) {
                </div>
                <div class="menu">
                  <li><a href="">Home</a></li>
-                 <li><a href="">Mijn tickets</a></li>
-                 <li><a href="">FAQ</a></li>
+                 <li><a href="tickets.php">Mijn tickets</a></li>
+                 <li><a href="faq-overzicht.php">FAQ</a></li>
+                 <li><a href="wijzigww.php">Account</a></li>
+                  <li><a id="red" href="loguit.php">Uitloggen</a></li>
                </div>
            </div>
         </div>
     </div>
     <section class="welcome">
-        <h3>Welkom Wijnske</h3>
+        <h3>Welkom <?php echo $row['GebruikerNaam']; ?></h3>
         <p>Etiam pretium ante et accumsan porttitor. Duis cursus quis lorem quis faucibus. Quisque aliquam, lorem eget rutrum facilisis, eros neque commodo elit, at tincidunt justo dui hendrerit mi. Cras lacinia nisi mauris, sed bibendum dolor sagittis non. In ut pharetra sapien. Nulla quis interdum massa, aliquet hendrerit quam. Vivamus maximus sagittis pharetra. Fusce pretium tristique mauris, ut dignissim metus mattis sit amet. Nam dolor purus, semper eget imperdiet </p>
         <button class="button">Maak een nieuw ticket</button>
     </section>
@@ -46,7 +54,7 @@ if(!isset( $_SESSION['GebruikerId'])) {
     <section>
         <div class="header-search2">
                <h3 class="header-search--title">Zoek je vraag hier</h3>
-                <form method="post">
+                <form method="post" action="faq-overzicht.php">
                     <input type="text" placeholder="Begin je vraag te zoeken ...">
                     <input type="submit" value="Zoeken" class="button-blue">
                 </form>
@@ -55,7 +63,7 @@ if(!isset( $_SESSION['GebruikerId'])) {
      <section class="options">
             <div class="row">
                 <div class="four columns">
-                    <a href=""><i class="fas fa-list-ul"></i></a>
+                    <a href="tickets.php"><i class="fas fa-list-ul"></i></a>
                     <h4>Bekijk je tickets</h4>
                 </div>
                 <div class="four columns">
@@ -63,7 +71,7 @@ if(!isset( $_SESSION['GebruikerId'])) {
                     <h4>Bekijk mijn profiel</h4>
                 </div>
                 <div class="four columns">
-                    <a href=""><i class="fas fa-search"></i></a>
+                    <a href="faq-overzicht.php"><i class="fas fa-search"></i></a>
                     <h4>Zoek een vraag</h4>
                 </div>
             </div>
