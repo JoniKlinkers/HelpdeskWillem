@@ -50,7 +50,7 @@
                       echo'<a href="#accordion'.$i.'" aria-expanded="false" aria-controls="accordion'.$i.'" class="accordion-title accordionTitle js-accordionTrigger">'.$row['FAQVraag'].'</a>';
                       echo'</div>';
                     echo'<div class="accordion-content accordionItem is-collapsed">';
-                      echo'<p>'.$row['FAQAntwoord'].'</p>';
+                      echo'<p style="text-align:center">'.$row['FAQAntwoord'].'</p>';
                   echo'</div>';
               echo'</div>';
               } 
