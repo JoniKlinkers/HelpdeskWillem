@@ -1,6 +1,6 @@
 <?php
 	include 'connect.php';
-    $sql = "select CategorieId, SubCategorie, CategorieNaam from tblcategorie order by SubCategorie, CategorieNaam";
+    $sql = "select CategorieId, SubCategorie, CategorieNaam from tblcategorie order by CategorieNaam";
     $resultaat = $conn->query($sql);
 
 ?>
@@ -12,7 +12,7 @@
             <option value = "Select" selected>Select</option>
             <?php   
                 while ($row = $resultaat->fetch_assoc()){
-                    echo "<option value='".$row['CategorieId']."'>".$row['SubCategorie'].": ".$row['CategorieNaam']."</option>";
+                    echo "<option value='".$row['CategorieId']."'>".$row['CategorieNaam'].": ".$row['SubCategorie']."</option>";
                 }
             ?>
         </select>
