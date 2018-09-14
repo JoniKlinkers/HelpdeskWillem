@@ -22,7 +22,7 @@
                    <h4>MANGO'S</h4>
                </div>
                <div class="menu">
-                   <a href="./databank/login.html"><button type="submit" value="Aanmelden" class="button">Aanmelden</button></a>
+                   <a href="./databank/login.php"><button type="submit" value="Aanmelden" class="button">Aanmelden</button></a>
                   <a href="./Databank/registeren.php"><button type="submit" value="Aanmelden" class="button">Registeren</button></a>
                </div>
            </div>

@@ -21,11 +21,11 @@
             header('location: ../index.php');
         }else {
         echo "Fout ingevuld probeer opnieuw.";
-        echo '</br> <a href="login.html">back</a>';
+        echo '</br> <a href="login.php">back</a>';
         }
     } else {
         echo "Fout ingevuld probeer opnieuw.";
-        echo '</br> <a href="login.html">back</a>';
+        echo '</br> <a href="login.php">back</a>';
     }
     }
 ?>
