@@ -11,7 +11,7 @@ $mail->Port = 465;
 $mail->Username = 'willemhelpdesk@gmail.com';
 $mail->Password = 'sfeer123';
 $mail->setFrom('willemhelpdesk@gmail.com');
-$mail->addAddress('.'$_SESSION["GebruikerEmail"]'.');
+$mail->addAddress($_SESSION["GebruikerEmail"]);
 $mail->Subject = 'bevestiging Mango helpdesk';
 $mail->Body = $bericht;
 $mail->WordWrap = 10000;
