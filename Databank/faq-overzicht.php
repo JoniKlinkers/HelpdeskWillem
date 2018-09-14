@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
   <link rel="icon" type="image/png" href="../images/favicon.png">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
@@ -47,11 +48,9 @@
                   echo'<div class="accordion--element">';
                     echo'<div class="accordion--head">';
                       echo'<a href="#accordion'.$i.'" aria-expanded="false" aria-controls="accordion'.$i.'" class="accordion-title accordionTitle js-accordionTrigger">'.$row['FAQVraag'].'</a>';
-                  echo'</div>';
-                  echo'<div class="accordion-content accordionItem is-collapsed">';
-                      echo'<p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales ac dolor eu sollicitudin. Praesent gravida, purus at rhoncus tempus, risus libero mollis nisl, hendrerit aliquam lacus purus vitae lectus. Vestibulum ac fermentum libero. Nunc viverra, urna non egestas finibus, tellus diam rhoncus urna, non mollis ex ante ac massa. Phasellus elementum accumsan nisl a pellentesque. Vivamus ac lorem non velit dignissim ullamcorper. Maecenas porttitor erat quis tellus porttitor efficitur. Nulla facilisi.
-                      </p>';
+                      echo'</div>';
+                    echo'<div class="accordion-content accordionItem is-collapsed">';
+                      echo'<p>'.$row['FAQAntwoord'].'</p>';
                   echo'</div>';
               echo'</div>';
               } 
@@ -62,6 +61,6 @@
     <footer>
         Copyright Mango's 2018. All right reserved.
     </footer>
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
