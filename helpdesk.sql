@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
@@ -111,6 +111,8 @@ CREATE TABLE IF NOT EXISTS `tblgebruikers` (
   `GebruikerPrestatie` int(11) NOT NULL DEFAULT '0',
   `GebruikerAvatar` text NOT NULL,
   `Online` int(11) NOT NULL DEFAULT '0',
+  `hashpassword` text NOT NULL,
+
   PRIMARY KEY (`GebruikerId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
