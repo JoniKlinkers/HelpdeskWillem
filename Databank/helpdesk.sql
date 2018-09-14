@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `tblgebruikers` (
   `GebruikerType` int(11) NOT NULL DEFAULT '0',
   `GebruikerPrestatie` int(11) NOT NULL DEFAULT '0',
   `GebruikerAvatar` text NOT NULL,
-  `Online` int(11) NOT NULL,
+  `Online` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`GebruikerId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
