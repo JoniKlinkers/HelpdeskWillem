@@ -4,6 +4,12 @@ body {
     100%;
     font-size: 13.5px;
 }
+.error {
+    background-color: red;
+    padding: 8px;
+    color: white;
+    margin-bottom: 5px;
+}
 #green {
     color: #2BA659;
 }
