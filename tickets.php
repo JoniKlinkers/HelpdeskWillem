@@ -8,7 +8,8 @@ if(!isset( $_SESSION['GebruikerId'])) {
 
 $userEmail = $_SESSION['GebruikerEmail'];
 $resultaat = $conn->query("select *  from tblgebruikers where GebruikerEmail = '{$userEmail}'");
-        $row = $resultaat->fetch_assoc();
+       
+  $row = $resultaat->fetch_assoc();
    
 ?>
 <!DOCTYPE html>
