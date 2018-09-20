@@ -2,7 +2,7 @@
 session_start();
 include('Databank/connect.php');
 if(!isset( $_SESSION['GebruikerId'])) {
-    echo header('location: login.php');
+    echo header('location: index.php');
 }
 
 $userEmail = $_SESSION['GebruikerEmail'];
@@ -40,8 +40,9 @@ $resultaat = $conn->query("select *  from tblgebruikers where GebruikerEmail = '
                             </div>
                             <input type="checkbox" class="dd-input test">
                             <div class="dd-menu">
-                                <img title="Tom Boon" class="u-max--ful-width float-left" width="110px" src="images/member.png">
                                 <div class="nav-user--box_text float-left">
+                                                                    <img title="Tom Boon" class="u-max--ful-width float-left" width="110px" src="<?php echo $row['GebruikerAvatar']; ?>">
+
                                     <b>Willem Vansteyvoort</b> <br />
                                     <a href="#">Profiel wijzigen</a>
                                     <br />
@@ -114,31 +115,12 @@ $resultaat = $conn->query("select *  from tblgebruikers where GebruikerEmail = '
                     </div>
                     <div class="four columns">
                         <div id="test" class="box-large notitions">   
-                            <h5>Snelle notitie</h5>
-                            <form>
-                                <input type="text" name="title" placeholder="Titel">
-                                <textarea placeholder="inhoud"></textarea>
-                                <input class="button-primary" type="submit" value="Opslagen">
-                            </form>
+                          <h5>dfdf</h5>
                         </div>
                     </div>
                     <div class="four columns">
                         <div class="box-large activities"> 
                             <h5>Laatste activiteiten</h5>
-                            <table>
-                                <tr>
-                                    <td>Nieuw artikel aangemaakt door Willem</td>
-                                    <td id="bold">25 minuten geleden</td>
-                                </tr>
-                                <tr>
-                                    <td>Nieuwe wedstrijd gestart door Willem</td>
-                                    <td id="bold">3 uur geleden</td>
-                                </tr>
-                                <tr>
-                                    <td>Willem heeft de ranking aangepast</td>
-                                    <td id="bold">2 dagen geleden</td>
-                                </tr>
-                            </table>
                         </div>
                     </div>
                 </div>
