@@ -62,64 +62,68 @@ $resultaat = $conn->query("select *  from tblgebruikers where GebruikerEmail = '
                 </div>
                 </nav>
             <main>
-                <h4>Dashboard</h4>
+                <h4>Open Tickets</h4>
                 <div class="row">
                     <div class="twelve columns">
                         <div class="box-large"> 
-                            <h5>Welkom op het adminpaneel!</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra mauris tristique metus volutpat, quis malesuada est blandit. Mauris consectetur, sem vitae porta auctor, justo leo posuere ex, rutrum pretium augue ipsum ut lorem. Curabitur at feugiat purus. Donec molestie, metus ac imperdiet scelerisque, velit justo porttitor diam
-                            </p>
-                            <button class="button-primary"><i class="fas fa-wrench"></i> Instellingen</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="four columns">
-                        <div class="box-large stats"> 
-                            <h5>Statistieken</h5>
-                            <div class="row">
-                                <div class="six columns">
-                                    Aantal nieuwsberichten
-                                </div>
-                                <div class="six columns">
-                                    <span class="span-green float-right">20</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="six columns">
-                                    Aantal evenementen
-                                </div>
-                                <div class="six columns">
-                                    <span class="span-green float-right">2</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="six columns">
-                                    Actieve landen
-                                </div>
-                                <div class="six columns">
-                                    <span class="span-green float-right">98</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="six columns">
-                                    Spelers in databank
-                                </div>
-                                <div class="six columns">
-                                    <span class="span-green float-right">260</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="four columns">
-                        <div id="test" class="box-large notitions">   
-                          <h5>dfdf</h5>
-                        </div>
-                    </div>
-                    <div class="four columns">
-                        <div class="box-large activities"> 
-                            <h5>Laatste activiteiten</h5>
+                            <?php
+
+
+$SortBy = "TicketId";
+
+if(isset ($_POST["SortBy"])){
+    $SortBy = $_POST['SortBy'];
+}
+
+$sql = "SELECT * FROM tblticket ORDER BY " . $SortBy;
+$result = $conn->query($sql);
+?>
+<div class="row">
+    <div class="seven columns">
+        <h1>Mijn tickets</h1>
+        <div class="tickets">
+                <table class="u-max-full-width">
+    <tr>
+        <td>TicketId</td>
+        <td>Vraag</td>
+        <td>CategorieId</td>
+        <td>TicketDatum</td>
+        <td>Status</td>
+        <td>Prioriteit</td>
+        <td>Moeilijk</td>
+        <td>Feedback</td>
+    </tr>
+<?php
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>#" . $row["TicketId"]. "</td><td>" . $row["Vraag"]. "</td><td>" . $row["CategorieId"]. "</td><td>" . $row["TicketDatum"]. "</td><td>" . $row["Status"]. "</td><td>" . $row["Prioriteit"]. "</td><td>" . $row["Moeilijk"]. "</td><td>" . $row["Feedback"]. "</td>";
+        echo"</tr>";
+    }
+} else {
+    echo "<tr><th>No tickets found.</th></tr>";
+}
+?>
+
+</table>
+        </div>
+    </div>
+    <div class="five columns">
+        <div class="sorteer">
+             <h1>Sorteer tickets</h1>
+<form method="post">
+    <input type="radio" name="SortBy" value="TicketId">TicketId
+    <input type="radio" name="SortBy" value="CategorieId">CategorieId
+    <input type="radio" name="SortBy" value="TicketDatum">TicketDatum
+    <input type="radio" name="SortBy" value="Status">Status
+    <input type="radio" name="SortBy" value="Moeilijk">Moeilijk
+    <input type="submit" value="Sorteer!">
+</form>
+        </div>
+       
+    </div>
+</div>
+ 
                         </div>
                     </div>
                 </div>
