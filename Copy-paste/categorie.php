@@ -1,5 +1,5 @@
 <?php
-	include 'connect.php';
+	include '../connect.php';
     $sql = "select CategorieId, SubCategorie, CategorieNaam from tblcategorie order by CategorieNaam";
     $resultaat = $conn->query($sql);
 

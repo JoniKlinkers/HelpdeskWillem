@@ -1,3 +1,15 @@
+<?php
+session_start();
+include('Databank/connect.php');
+if(!isset( $_SESSION['GebruikerId'])) {
+    echo header('location: login.php');
+}
+
+$userEmail = $_SESSION['GebruikerEmail'];
+$resultaat = $conn->query("select *  from tblgebruikers where GebruikerEmail = '{$userEmail}'");
+        $row = $resultaat->fetch_assoc();
+   
+?>
 
 <html lang="nl">
     <head>
@@ -24,7 +36,7 @@
                     <div class="nav-user--box float-right">
                         <label class="dropdown">
                             <div class="dd-button">
-                                Welkom, Willem
+                                Welkom, <?php echo $row['GebruikerNaam']; ?>
                             </div>
                             <input type="checkbox" class="dd-input test">
                             <div class="dd-menu">
@@ -33,7 +45,7 @@
                                     <b>Willem Vansteyvoort</b> <br />
                                     <a href="#">Profiel wijzigen</a>
                                     <br />
-                                    <a href="#">Uitloggen</a>
+                                    <a href="loguit.php">Uitloggen</a>
                                 </div>
                                     
                             </div>

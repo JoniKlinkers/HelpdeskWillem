@@ -53,6 +53,12 @@ input[type="submit"] {
     color: white;
     opacity: 0.8;
 }
+.tickets {
+  margin: 0 15%;
+}
+.sorteer input {
+  display: block;
+}
 button:hover {
      border: 1px solid #80ced6;
     color: white;
