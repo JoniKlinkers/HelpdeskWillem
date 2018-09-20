@@ -17,6 +17,10 @@
 <body>
 <?php
 include('./connect.php');
+session_start();
+if(isset( $_SESSION['GebruikerId'])) {
+    echo header('location: dashboard.php');
+}
 if(isset($_POST['GebruikerNaam'])) {
     $GebruikerEmail = $_POST['GebruikerEmail'];
     $GebruikerNaam = $_POST['GebruikerNaam'];

@@ -33,9 +33,13 @@
                 </form>
             </div>
         </div>
-        <?php
-    session_start();
-    include "connect.php";
+             <?php
+    include('connect.php');
+        session_start();
+
+    if(isset( $_SESSION['GebruikerId'])) {
+    echo header('location: dashboard.php');
+}
         $error;
         if(isset($_POST['GebruikerEmail'])) {
             $GebruikerEmail = $_POST['GebruikerEmail'];
@@ -44,19 +48,24 @@
         echo "Fout ingevuld probeer opnieuw.";
         echo '</br> <a href="index.php">back</a>';
     }else{
-        $sql = "select * from tblgebruikers where GebruikerEmail = '".$GebruikerEmail."'";
- 
-    if($resultaat = $conn->query($sql)){
-        $row = $resultaat->fetch_assoc();
-        if(password_verify($password, $row['GebruikerWW'])){
+
+
+
+    if($stmt = $conn->prepare( "select GebruikerWW, GebruikerType, GebruikerId from tblgebruikers where GebruikerEmail = ?")){
+        $stmt->bind_param("s", $GebruikerEmail);
+        $stmt->execute();
+        $stmt->bind_result($GebruikerWW, $GebruikerType, $GebruikerId);
+        $stmt->fetch();
+
+        if(password_verify($password, $GebruikerWW )){
             $_SESSION['GebruikerEmail'] = $GebruikerEmail;
-            $_SESSION['GebruikerType'] = $row['GebruikerType'];
-            $_SESSION['GebruikerWW'] = $row['GebruikerWW'];
-            $_SESSION['GebruikerId'] = $row['GebruikerId'];
+            $_SESSION['GebruikerType'] = $GebruikerType;
+            $_SESSION['GebruikerWW'] = $GebruikerWW;
+            $_SESSION['GebruikerId'] =  $GebruikerId;
 
             header('location: dashboard.php');
         }else {
-            $error = "De ingevoerde combinaties komen niet overeen";
+            $error = "De combinatie komt niet overeen.";
         }
     } else {
         echo "Fout ingevuld probeer opnieuw.";

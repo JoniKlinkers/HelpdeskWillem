@@ -1,5 +1,6 @@
 <?php
 include 'Databank/connect.php';
+
 ?>
 <html lang="nl">
     <head>
@@ -26,6 +27,9 @@ include 'Databank/connect.php';
             <div class="login-form float-left">
                     <?php
     session_start();
+    if(isset( $_SESSION['GebruikerId'])) {
+    echo header('location: home.php');
+}
         $error;
         if(isset($_POST['GebruikerEmail'])) {
             $GebruikerEmail = $_POST['GebruikerEmail'];
@@ -34,15 +38,20 @@ include 'Databank/connect.php';
         echo "Fout ingevuld probeer opnieuw.";
         echo '</br> <a href="index.php">back</a>';
     }else{
-        $sql = "select * from tblgebruikers where GebruikerEmail = '".$GebruikerEmail."'";
- 
-    if($resultaat = $conn->query($sql)){
-        $row = $resultaat->fetch_assoc();
-        if(password_verify($password, $row['GebruikerWW']) && $row['GebruikerType'] == 1 ){
+
+
+
+    if($stmt = $conn->prepare( "select GebruikerWW, GebruikerType, GebruikerId from tblgebruikers where GebruikerEmail = ?")){
+        $stmt->bind_param("s", $GebruikerEmail);
+        $stmt->execute();
+        $stmt->bind_result($GebruikerWW, $GebruikerType, $GebruikerId);
+        $stmt->fetch();
+
+        if(password_verify($password, $GebruikerWW) && $GebruikerType == 1 ){
             $_SESSION['GebruikerEmail'] = $GebruikerEmail;
-            $_SESSION['GebruikerType'] = $row['GebruikerType'];
-            $_SESSION['GebruikerWW'] = $row['GebruikerWW'];
-            $_SESSION['GebruikerId'] = $row['GebruikerId'];
+            $_SESSION['GebruikerType'] = $GebruikerType;
+            $_SESSION['GebruikerWW'] = $GebruikerWW;
+            $_SESSION['GebruikerId'] =  $GebruikerId;
 
             header('location: home.php');
         }else {
